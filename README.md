@@ -81,9 +81,9 @@ shl-recommendation-engine/
 *   **Request Body (JSON):**
     ```json
     {
-      "job_title": "Software Engineer", // Optional
-      "job_level": "Professional",     // Required (Entry, Professional, Managerial, Executive)
-      "competencies": ["problem solving", "python programming"] // Required (List of strings)
+      "job_title": "Software Engineer", 
+      "job_level": "Professional",     
+      "competencies": ["problem solving", "python programming"] 
     }
     ```
 *   **Success Response (200 OK):**
@@ -96,7 +96,7 @@ shl-recommendation-engine/
           "description": "...",
           "type": "Skill",
           "job_levels": ["Entry", "Professional"],
-          "competencies": ["python programming", ...]
+          "competencies": ["python programming"]
         },
         "score": 8.5
       },
@@ -104,7 +104,6 @@ shl-recommendation-engine/
         "assessment": { ... },
         "score": 6.2
       }
-      // ... up to max_results
     ]
     ```
 *   **Error Responses:**

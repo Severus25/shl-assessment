@@ -8,10 +8,6 @@ This project provides a simple web application and API to recommend SHL-like ass
 *   **API Base URL:** [Link to your deployed API base - e.g., https://your-app-name.onrender.com]
     *   Example Endpoint: `POST /recommend`
 
-*(Note: Add your live links here after deployment)*
-
-**GitHub Repository:** [Link to your GitHub repo]
-
 ## Features
 
 *   Web UI to input job title (optional), job level, and desired competencies.
@@ -47,7 +43,7 @@ shl-recommendation-engine/
 
 1.  **Clone the repository:**
     ```bash
-    git clone [Your GitHub Repo URL]
+    git clone 
     cd shl-recommendation-engine
     ```
 

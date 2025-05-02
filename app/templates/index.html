@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SHL Assessment Recommender</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <!-- Optional: Add Select2 for better multi-select -->
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/select2-bootstrap-5-theme@1.3.0/dist/select2-bootstrap-5-theme.min.css" />
+
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary mb-4">
+        <div class="container">
+            <a class="navbar-brand" href="#">SHL Recommender</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1 class="mb-4 text-center">Find the Right SHL Assessment</h1>
+
+        <form id="recommendation-form" class="card p-4 shadow-sm">
+            <div class="mb-3">
+                <label for="job-title" class="form-label">Job Title (Optional)</label>
+                <input type="text" class="form-control" id="job-title" placeholder="e.g., Software Engineer, Marketing Manager">
+            </div>
+
+            <div class="mb-3">
+                <label for="job-level" class="form-label">Job Level*</label>
+                <select class="form-select" id="job-level" required>
+                    <option value="" disabled selected>Select Job Level</option>
+                    <option value="Entry">Entry Level</option>
+                    <option value="Professional">Professional / Specialist</option>
+                    <option value="Managerial">Managerial / Team Lead</option>
+                    <option value="Executive">Executive / Senior Leader</option>
+                </select>
+            </div>
+
+            <div class="mb-3">
+                <label for="competencies" class="form-label">Select Key Competencies* (Select at least one)</label>
+                <!-- Use Select2 for a better multi-select experience -->
+                <select class="form-select" id="competencies" multiple="multiple" required data-placeholder="Type or select competencies...">
+                    <!-- Options populated dynamically or hardcoded -->
+                    <option value="problem solving">Problem Solving</option>
+                    <option value="critical thinking">Critical Thinking</option>
+                    <option value="reasoning">Reasoning</option>
+                    <option value="data interpretation">Data Interpretation</option>
+                    <option value="collaboration">Collaboration</option>
+                    <option value="leadership">Leadership</option>
+                    <option value="influence">Influence</option>
+                    <option value="resilience">Resilience</option>
+                    <option value="interpersonal skills">Interpersonal Skills</option>
+                    <option value="drive">Drive</option>
+                    <option value="adaptability">Adaptability</option>
+                    <option value="numerical reasoning">Numerical Reasoning</option>
+                    <option value="data analysis">Data Analysis</option>
+                    <option value="attention to detail">Attention to Detail</option>
+                    <option value="logical reasoning">Logical Reasoning</option>
+                    <option value="decision making">Decision Making</option>
+                    <option value="motivation">Motivation</option>
+                    <option value="engagement">Engagement</option>
+                    <option value="values alignment">Values Alignment</option>
+                    <option value="customer focus">Customer Focus</option>
+                    <option value="judgment">Judgment</option>
+                    <option value="people management">People Management</option>
+                    <option value="strategic thinking">Strategic Thinking</option>
+                    <option value="python programming">Python Programming</option>
+                    <option value="algorithmic thinking">Algorithmic Thinking</option>
+                    <option value="debugging">Debugging</option>
+                    <option value="verbal comprehension">Verbal Comprehension</option>
+                    <option value="communication">Communication</option>
+                    <option value="self-discipline">Self-Discipline</option>
+                    <option value="time management">Time Management</option>
+                    <!-- Add more competencies based on your data -->
+                </select>
+                <div class="invalid-feedback">Please select at least one competency.</div>
+            </div>
+
+
+            <button type="submit" class="btn btn-primary w-100">Get Recommendations</button>
+        </form>
+
+        <div id="results-area" class="mt-5" style="display: none;">
+            <h2 class="mb-3">Recommendations</h2>
+             <div id="loading-indicator" class="text-center" style="display: none;">
+                <div class="spinner-border text-primary" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+            </div>
+            <div id="error-message" class="alert alert-danger" style="display: none;"></div>
+            <div id="recommendations-list" class="list-group">
+                <!-- Recommendations will be inserted here -->
+            </div>
+             <div id="no-results-message" class="alert alert-info" style="display: none;">
+                No matching assessments found for the selected criteria.
+            </div>
+        </div>
+
+    </div>
+
+    <footer class="mt-5 py-3 bg-light text-center">
+        <p class="text-muted">SHL Assessment Recommender Demo</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

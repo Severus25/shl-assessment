@@ -1,0 +1,82 @@
+[
+    {
+      "id": "SHL001",
+      "name": "Verify G+ (Inductive Reasoning)",
+      "description": "Measures the ability to draw inferences and understand the relationships between various concepts independent of acquired knowledge.",
+      "type": "Cognitive",
+      "job_levels": ["Entry", "Professional", "Managerial"],
+      "competencies": ["problem solving", "critical thinking", "reasoning", "data interpretation"]
+    },
+    {
+      "id": "SHL002",
+      "name": "Occupational Personality Questionnaire (OPQ32r)",
+      "description": "Provides detailed information on an individual's behavioral style at work, helping predict job performance.",
+      "type": "Behavioral",
+      "job_levels": ["Professional", "Managerial", "Executive"],
+      "competencies": ["collaboration", "leadership", "influence", "resilience", "interpersonal skills", "drive", "adaptability"]
+    },
+    {
+      "id": "SHL003",
+      "name": "Verify G+ (Numerical Reasoning)",
+      "description": "Assesses the ability to make correct decisions or inferences from numerical or statistical data.",
+      "type": "Cognitive",
+      "job_levels": ["Entry", "Professional", "Managerial"],
+      "competencies": ["numerical reasoning", "data analysis", "critical thinking", "attention to detail"]
+    },
+    {
+      "id": "SHL004",
+      "name": "Verify G+ (Deductive Reasoning)",
+      "description": "Evaluates the ability to draw logical conclusions based on information provided, identify strengths and weaknesses of arguments, and complete scenarios using incomplete information.",
+      "type": "Cognitive",
+      "job_levels": ["Professional", "Managerial"],
+      "competencies": ["problem solving", "logical reasoning", "critical thinking", "decision making"]
+    },
+    {
+      "id": "SHL005",
+      "name": "Motivation Questionnaire (MQ)",
+      "description": "Explores the situations that are likely to increase or reduce an individual's motivation to work.",
+      "type": "Behavioral",
+      "job_levels": ["Entry", "Professional", "Managerial", "Executive"],
+      "competencies": ["motivation", "engagement", "drive", "values alignment"]
+    },
+    {
+      "id": "SHL006",
+      "name": "Situational Judgment Test (SJT) - Customer Service",
+      "description": "Presents realistic work-related scenarios to assess judgment and decision-making skills in customer-facing roles.",
+      "type": "Situational",
+      "job_levels": ["Entry", "Professional"],
+      "competencies": ["customer focus", "problem solving", "interpersonal skills", "judgment", "decision making"]
+    },
+    {
+      "id": "SHL007",
+      "name": "Situational Judgment Test (SJT) - Management",
+      "description": "Assesses judgment and decision-making capabilities for managerial roles through realistic workplace scenarios.",
+      "type": "Situational",
+      "job_levels": ["Managerial", "Executive"],
+      "competencies": ["leadership", "decision making", "problem solving", "people management", "strategic thinking"]
+    },
+    {
+      "id": "SHL008",
+      "name": "Coding Skill Test (Python)",
+      "description": "Evaluates practical Python coding skills through hands-on challenges.",
+      "type": "Skill",
+      "job_levels": ["Entry", "Professional"],
+      "competencies": ["python programming", "problem solving", "algorithmic thinking", "debugging"]
+    },
+    {
+      "id": "SHL009",
+      "name": "Verbal Reasoning Test",
+      "description": "Assesses ability to understand and evaluate written passages.",
+      "type": "Cognitive",
+      "job_levels": ["Entry", "Professional", "Managerial"],
+      "competencies": ["verbal comprehension", "critical thinking", "communication", "reasoning"]
+    },
+    {
+      "id": "SHL010",
+      "name": "RemoteWorkQ",
+      "description": "Assesses key competencies and preferences relevant for success in remote working environments.",
+      "type": "Behavioral",
+      "job_levels": ["Professional", "Managerial"],
+      "competencies": ["adaptability", "self-discipline", "communication", "collaboration", "time management", "resilience"]
+    }
+  ]
